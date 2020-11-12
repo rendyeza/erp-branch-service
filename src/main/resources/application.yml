@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dev
+    username: branch_service
+    password: servicespassword
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        default_schema: branch_service
+        jdbc:
+          time_zone: UTC
+
+server:
+  error:
+    include-message: always
